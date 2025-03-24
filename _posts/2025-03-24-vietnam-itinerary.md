@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Vietnam Itinerary
-categories: vietnam travel
+categories: travel vietnam
 ---
 
 

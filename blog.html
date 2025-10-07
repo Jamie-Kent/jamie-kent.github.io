@@ -8,10 +8,25 @@ title: Blog
   <p class="text-gray-600">Learning notes, thoughts, and guides</p>
 </div>
 
+<!-- Search Bar -->
+<div class="mb-8">
+  <input 
+    type="text" 
+    id="search-input" 
+    placeholder="Search by title, category, tag, or description..." 
+    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+  />
+  <p id="search-results-count" class="text-sm text-gray-600 mt-2"></p>
+</div>
+
 <!-- Posts List -->
-<div class="space-y-8">
+<div id="posts-list" class="space-y-8">
   {% for post in site.posts %}
-  <article class="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-md transition">
+  <article class="post-item bg-white border border-gray-200 rounded-lg p-6 hover:shadow-md transition" 
+           data-title="{{ post.title | downcase }}" 
+           data-categories="{{ post.categories | join: ' ' | downcase }}" 
+           data-tags="{{ post.tags | join: ' ' | downcase }}"
+           data-description="{{ post.description | default: '' | downcase }}">
     <h2 class="text-2xl font-bold mb-2">
       <a href="{{ post.url | relative_url }}" class="text-gray-900 hover:text-blue-600">
         {{ post.title }}
@@ -33,8 +48,8 @@ title: Blog
       {% endif %}
     </div>
     
-    {% if post.excerpt %}
-    <p class="text-gray-700 mb-4">{{ post.excerpt | strip_html | truncatewords: 30 }}</p>
+    {% if post.description %}
+    <p class="text-gray-700 mb-4">{{ post.description }}</p>
     {% endif %}
     
     <a href="{{ post.url | relative_url }}" class="text-blue-600 hover:text-blue-800 font-medium">
@@ -43,3 +58,53 @@ title: Blog
   </article>
   {% endfor %}
 </div>
+
+<!-- Search Script -->
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const searchInput = document.getElementById('search-input');
+    const postsContainer = document.getElementById('posts-list');
+    const posts = Array.from(document.querySelectorAll('.post-item'));
+    const resultsCount = document.getElementById('search-results-count');
+  
+    searchInput.addEventListener('input', function(e) {
+      const searchTerm = e.target.value.toLowerCase().trim();
+      
+      if (searchTerm === '') {
+        // Show all posts
+        posts.forEach(post => post.style.display = 'block');
+        resultsCount.textContent = '';
+        return;
+      }
+      
+      let visibleCount = 0;
+      
+      posts.forEach(post => {
+        const title = post.dataset.title;
+        const categories = post.dataset.categories;
+        const tags = post.dataset.tags;
+        const description = post.dataset.description;
+        
+        // Check if search term is in title, categories, tags, or description
+        if (title.includes(searchTerm) || 
+            categories.includes(searchTerm) || 
+            tags.includes(searchTerm) ||
+            description.includes(searchTerm)) {
+          post.style.display = 'block';
+          visibleCount++;
+        } else {
+          post.style.display = 'none';
+        }
+      });
+      
+      // Update results count
+      if (visibleCount === 0) {
+        resultsCount.textContent = 'No posts found';
+      } else if (visibleCount === 1) {
+        resultsCount.textContent = '1 post found';
+      } else {
+        resultsCount.textContent = `${visibleCount} posts found`;
+      }
+    });
+  });
+  </script>

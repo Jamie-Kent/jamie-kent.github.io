@@ -3,6 +3,7 @@ layout: post
 title: "My Shuffling journey"
 date: 2024-01-22 21:11 +0000
 categories: learning shuffling
+description: "A 15-session journey learning shuffle dancing techniques including the running man, Charleston, T-step, and double tap, with progress videos and feedback from friends."
 ---
 
 <a name="readme-top"></a>

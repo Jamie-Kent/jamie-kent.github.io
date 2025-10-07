@@ -3,6 +3,7 @@ layout: post
 title: Macbook Guide
 date: 2024-03-11 20:04
 categories: learning macbook
+description: "Setup guide for essential MacBook development tools including Homebrew, iTerm2, Visual Studio Code, and various productivity plugins."
 ---
 
 <a name="readme-top"></a>

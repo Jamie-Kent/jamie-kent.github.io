@@ -3,6 +3,7 @@ layout: post
 title: "Home Network (Project)"
 date: 2024-01-04 23:11 +0000
 categories: learning networking
+description: "Complete network overhaul replacing a mesh powerline system with UniFi equipment, including research on access points, switches, gateways, VLANs, and security camera integration."
 ---
 
 

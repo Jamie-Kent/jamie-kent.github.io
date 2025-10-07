@@ -3,6 +3,7 @@ layout: post
 title: Smart Home
 date: 2024-03-11 20:40
 categories: learning smart-home
+description: "Guide to setting up a self-hosted smart home system using HomeBridge on an Orange Pi, including configuration for Tapo smart devices and integration with Apple HomeKit."
 ---
 
 <a name="readme-top"></a>

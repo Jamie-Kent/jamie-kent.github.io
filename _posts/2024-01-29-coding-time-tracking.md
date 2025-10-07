@@ -3,6 +3,7 @@ layout: post
 title: "Coding Time Tracking"
 date: 2024-01-29 19:46 +0000
 categories: learning coding
+description: "Learning progress tracker for JavaScript fundamentals and algorithms while working through freeCodeCamp's curriculum, including DOM manipulation and functional programming."
 ---
 
 <a name="readme-top"></a>

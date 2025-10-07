@@ -2,6 +2,7 @@
 layout: post
 title: Vietnam Itinerary
 categories: travel vietnam
+description: "Detailed 16-day travel itinerary for Vietnam covering Hanoi, Ha Long Bay, Ha Giang Loop, and Hoi An with transportation details, costs, and accommodation recommendations."
 ---
 
 

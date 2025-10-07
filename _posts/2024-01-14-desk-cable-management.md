@@ -3,6 +3,7 @@ layout: post
 title: "Desk Cable Management (Project)"
 date: 2024-01-14 18:20 +0000
 categories: learning cabling
+description: "A project documenting the transformation of a messy desk setup into a clean, organized workspace using cable management techniques and custom mounting solutions."
 ---
 
 ## Table of Contents

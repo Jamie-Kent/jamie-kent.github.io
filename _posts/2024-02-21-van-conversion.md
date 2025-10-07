@@ -3,6 +3,7 @@ layout: post
 title: "Van Conversion (Project)"
 date: 2024-02-21 18:30
 categories: learning van
+description: "Planning and research for converting a LWB van (Mercedes Sprinter or VW Crafter) for van life purposes."
 ---
 
 <a name="readme-top"></a>

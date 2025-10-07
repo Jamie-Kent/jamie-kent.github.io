@@ -5,6 +5,7 @@ date: 2024-01-01
 categories: [learning, github]
 tags: [git, cli, tutorial]
 toc: true
+description: "A comprehensive guide to learning Git CLI commands, covering basic operations, branching, merging conflicts, pushing to GitHub, and creating Jekyll posts."
 ---
 
 ## Learning

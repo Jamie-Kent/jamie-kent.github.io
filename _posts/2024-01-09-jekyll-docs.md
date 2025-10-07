@@ -4,6 +4,7 @@ title: "Reading through Jekyll docs"
 date: 2024-01-09 19:12
 categories: learning jekyll
 permalink: jekyll-basics-learning
+description: "Notes from working through Jekyll documentation, covering installation, Liquid templating, front matter, layouts, and basic Jekyll functionality."
 ---
 
 <h2 id="#table-of-contents">Table of Contents</h2>

@@ -57,3 +57,20 @@ plugins: []
 header_pages:
   - about.html
   - cv.html
+
+
+# ------------------------ Projects ----------------------
+
+# Collections
+collections:
+  projects:
+    output: true
+    permalink: /projects/:title/
+
+# Defaults for projects
+defaults:
+  - scope:
+      path: ""
+      type: "projects"
+    values:
+      layout: "project"

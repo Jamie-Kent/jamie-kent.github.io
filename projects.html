@@ -1,0 +1,52 @@
+---
+layout: default
+title: Projects
+---
+
+<div class="mb-12">
+  <h1 class="text-4xl font-bold mb-4">Projects</h1>
+  <p class="text-gray-600">Things I've built</p>
+</div>
+
+<!-- Projects List -->
+<div class="space-y-8">
+  {% for project in site.projects %}
+  <article class="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-md transition">
+    <h2 class="text-2xl font-bold mb-2">
+      <a href="{{ project.url | relative_url }}" class="text-gray-900 hover:text-blue-600">
+        {{ project.title }}
+      </a>
+    </h2>
+    
+    <div class="flex items-center gap-4 text-sm text-gray-600 mb-4">
+      <time datetime="{{ project.date | date_to_xmlschema }}">
+        {{ project.date | date: "%B %-d, %Y" }}
+      </time>
+      
+      {% if project.tech_stack %}
+      <span>•</span>
+      {% for tech in project.tech_stack limit:3 %}
+      <span class="px-2 py-1 bg-purple-100 text-purple-800 rounded text-xs">
+        {{ tech }}
+      </span>
+      {% endfor %}
+      {% endif %}
+    </div>
+    
+    {% if project.excerpt %}
+    <p class="text-gray-700 mb-4">{{ project.excerpt | strip_html }}</p>
+    {% endif %}
+    
+    <div class="flex gap-4">
+      <a href="{{ project.url | relative_url }}" class="text-blue-600 hover:text-blue-800 font-medium">
+        Read more →
+      </a>
+      {% if project.demo_url %}
+      <a href="{{ project.demo_url }}" target="_blank" class="text-gray-600 hover:text-gray-900">
+        Live Demo
+      </a>
+      {% endif %}
+    </div>
+  </article>
+  {% endfor %}
+</div>

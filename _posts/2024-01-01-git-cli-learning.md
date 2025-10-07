@@ -1,8 +1,10 @@
 ---
 layout: post
-title: Git CLI Learning
-date: 2024-01-01 23:11 +0000
-categories: learning github
+title: "Git CLI Learning"
+date: 2024-01-01
+categories: [learning, github]
+tags: [git, cli, tutorial]
+toc: true
 ---
 
 ## Learning

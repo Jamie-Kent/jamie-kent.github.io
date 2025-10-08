@@ -67,6 +67,15 @@
     color: #2563eb;
     text-decoration: none;
   }
+
+  /* Override prose link color for buttons - more specific selector */
+  .prose a.bg-blue-600 {
+    color: white !important;
+  }
+
+  .prose a.border {
+    color: #111827 !important;
+  }
   
   .prose a:hover {
     text-decoration: underline;

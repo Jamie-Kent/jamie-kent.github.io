@@ -1,7 +1,6 @@
 ---
 layout: post
 title: "Git starter guide"
-date: 2025-10-30
 categories: [github, git]
 tags: [git, cli, guide, source-control, version-control]
 toc: true
